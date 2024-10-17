@@ -1,0 +1,77 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background">
+            <div class="container d-lg-flex justify-content-between align-items-center">
+                <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
+            </div>
+        </div><!-- End Page Title -->
+
+        <!-- Portfolio Details Section -->
+        <section id="portfolio-details" class="portfolio-details section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper init-swiper">
+
+                            <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img src="{% static 'assets/img/webS.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Project information</h3>
+                            <ul>
+                                <li><strong>Category</strong>: Web Scrapping</li>
+                                <li><strong>Title</strong>: Amazon Web scrapping</li>
+                                <li><strong>IDE</strong>: Jupyter Notebook</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+                            <h2>Web Scrapping of Amazon Products</h2>
+                            <p>
+                                Web scraping is the automated process of extracting data from websites, allowing users
+                                to gather information for analysis or research.It is utilized to collect detailed
+                                product information
+                                from Amazon, including prices, descriptions, and reviews. This data can then be
+                                processed and analyzed to gain insights into market trends.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Portfolio Details Section -->
+
+    </main>
+{% endblock content %}
